@@ -2,7 +2,7 @@
 <br>
 <div class=container>
   <h1><%= @task.title %></h1>
-  <div class="card bg-dark bg-opacity-25">
+  <div class="card bg-dark bg-opacity-25 mb-3">
     <div class="card-body">
       <%= @task.details %>
     </div>
@@ -18,5 +18,7 @@
       This task is not completed yet
     <% end %>
     </label>
+    <hr>
+    <%= link_to "Back to list", tasks_path() %>
   </div>
 </div>

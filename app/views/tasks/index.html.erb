@@ -7,10 +7,19 @@
       <input type="checkbox" class="form-check-input" id="task_title" <% if task.completed %> checked <% end %>>
       <label class="form-check-label" for="task_title">
         <%= link_to task.title, task_path(task) %>
+        <%= link_to "Delete", task_path(task),
+        method: :delete,
+        data: { confirm: "Are you sure?" }
+        %>
       </label>
     </div>
   <% end %>
+  <hr class="mb-3">
+  <%= link_to "Back to list", new_task_path %>
 </div>
+
+
+
 
 
 
