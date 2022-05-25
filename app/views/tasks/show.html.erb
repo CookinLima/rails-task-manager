@@ -1,0 +1,22 @@
+<br>
+<br>
+<div class=container>
+  <h1><%= @task.title %></h1>
+  <div class="card bg-dark bg-opacity-25">
+    <div class="card-body">
+      <%= @task.details %>
+    </div>
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="task_title" <% if @task.completed %>
+  checked
+<% end %>>      
+    <label class="form-check-label" for="task_title">
+    <% if @task.completed %>
+      This task is completed
+      <% else %>
+      This task is not completed yet
+    <% end %>
+    </label>
+  </div>
+</div>
